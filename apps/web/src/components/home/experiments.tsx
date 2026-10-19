@@ -1,0 +1,5 @@
+import { experiments } from '@/data/products';
+
+export function Experiments() {
+  return <section className="experiments-section section-pad"><div className="section-rail"><span>WORK IN PROGRESS</span><span>007 — 007</span></div><div className="section-inner"><div className="section-heading-row"><div><span className="kicker"><span className="gold-line"/> WHAT’S NEXT</span><h2 className="display-heading">FROM<br/><em>THE LAB.</em></h2></div><p>Some ideas are still becoming.<br/>That’s the exciting part.</p></div><div className="experiments-list">{experiments.map(item=><div className="experiment" key={item.name} tabIndex={0} data-cursor="OPEN"><span className="experiment-number">{item.number}</span><span className="experiment-title">{item.name}</span><span className="experiment-detail">{item.detail}</span><span className="experiment-status">{item.status}</span><span className="experiment-arrow">↗</span></div>)}</div><div className="experiments-note"><span>EVERY PRODUCT BEGINS AS A QUESTION.</span><span>MORE TO COME ↗</span></div></div></section>;
+}
